@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 899503901069-ivn5nacil50lkq0jnqvlq4jhdbqkrprd.apps.googleusercontent.com
+            client-secret: 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
+            scope: openid, profile, email
+            redirect-uri: "{baseUrl}/login/oauth2/code/google"
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
+server:
+  port: 8280
