@@ -27,8 +27,10 @@ public class CustomOAuth2UserService extends OidcUserService {
         SimpleGrantedAuthority authority;
         if ("volgin26@gmail.com".equals(email)) {
             authority = new SimpleGrantedAuthority("ROLE_ADMIN");
+            log.info("Вход админа");
         } else {
             authority = new SimpleGrantedAuthority("ROLE_USER");
+            log.info("Вход пользователя");
         }
 
         OidcUserInfo oidcUserInfo = new OidcUserInfo(attributes);
